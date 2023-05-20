@@ -11,6 +11,17 @@ function ListarProdutos(){
     }
 }
 
+function CriarProduto(novoProduto){
+    try {
+      const dados = JSON.parse(fs.readFileSync("dados.json", "utf-8"))
+      dados.produtos.push(JSON.parse(novoProduto))
+      fs.writeFileSync("dados.json", JSON.stringify(dados))
+      return "Produto cadastrado com sucesso!"
+    } catch {
+      return "Erro ao cadastrar"
+    }
+  }
+
 const server = http.createServer((req, res) => {
 
     if(request.url == "/produto"){
