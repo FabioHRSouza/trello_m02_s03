@@ -33,7 +33,14 @@ const server = http.createServer((req, res) => {
             break
 
             case "POST":
-            // aqui vai a lógica do POST - exercício 7
+                let produto = ''
+                request.on("data", (chunk) => {
+                  produto += chunk
+                })
+                request.on("end", () => {
+                  response.writeHead(200, {"Content-Type": "text/plain; charset: utf-8;"})
+                  response.end(CriarProduto(produto))
+                })
             break
         }
     }
