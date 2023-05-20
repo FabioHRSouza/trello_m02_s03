@@ -17,7 +17,8 @@ const server = http.createServer((req, res) => {
         switch(req.method){
           
             case "GET":
-            // aqui vai a lógica do GET - exercício 5
+                response.writeHead(200, {"Content-Type": "application/json; charset: utf-8;"})
+                response.end(ListarProdutos())
             break
 
             case "POST":
