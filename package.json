@@ -1,0 +1,14 @@
+{
+  "name": "trello_m02_s03",
+  "version": "1.0.0",
+  "description": "exercicio do trello, modulo 02, semana 03.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Fabio HR Souza",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
